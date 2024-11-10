@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medicins>
+    <medicin id="m1" name="Диклофенак" group="противоспалительное">
+        <analogs>
+            <analog name="Вольтарен" />
+            <analog name="Дикловит" />
+            <analog name="Диклофарм" />
+        </analogs>
+        <versions>
+            <version type="таблетки">
+                <manufacture name="farm">
+                    <certificate number="001" dateCreate="2024-02-03" dateExpiration="2026-02-03" registrationCompany="TFarm"/>
+                    <package type="пластины" weight="40" price="10" />
+                    <dosage>Тут инструкция по применению</dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m2" name="Аевит" group="витамины">
+        <versions>
+            <version type="капсулы">
+                <manufacture name="farm">
+                    <certificate number="002" dateCreate="2024-02-03" dateExpiration="2026-02-03" registrationCompany="TFarm"/>
+                    <package type="пластины" weight="25" price="8" />
+                    <dosage>комбинация витаминов А Е</dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m3" name="Аспирин" group="противоспалительное">
+        <analogs>
+            <analog name="Терафлю" />
+            <analog name="Парацетамол" />
+        </analogs>
+        <versions>
+            <version>
+                <manufacture name="farm">
+                    <certificate number="003" dateCreate="2024-05-06" dateExpiration="2026-08-04" registrationCompany="RegFarm"/>
+                    <package type="пластины" weight="40" price="10" />
+                    <dosage>лекарственное средство, оказывающее обезболивающее, жаропонижающее, противовоспалительное действие.</dosage>
+                </manufacture>
+                <manufacture name="ОАОБелФарм">
+                    <certificate number="004" dateCreate="2024-02-03" dateExpiration="2028-02-03" registrationCompany="RegFarm"/>
+                    <package type="коробка" weight="80" price="20" />
+                    <dosage>лекарственное средство, оказывающее обезболивающее, жаропонижающее, противовоспалительное действие.</dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m4" name="антигриппин" group="болеутоляющие">
+        <analogs>
+            <analog name="Парацетамол" />
+        </analogs>
+        <versions>
+            <version>
+                <manufacture name="Belfarm">
+                    <certificate number="005" dateCreate="2024-01-01" dateExpiration="2028-01-01" registrationCompany="FRegFarm"/>
+                    <package type="пластиковый пенал" weight="40" price="20" />
+                    <dosage>Показания к применению Инфекционно-воспалительные заболевания (ОРВИ, грипп),
+                        сопровождающиеся повышенной температурой, ознобом, головной болью,
+                        болями в суставах и мышцах, заложенностью носа и болями в горле и пазухах носа.
+                    </dosage>
+                </manufacture>
+            </version>
+            <version type="порошок">
+                <manufacture name="Belfarm">
+                    <certificate number="006" dateCreate="2024-01-01" dateExpiration="2028-01-01" registrationCompany="FRegFarm"/>
+                    <package type="пластиковый пакет" weight="30" price="15.7" />
+                    <dosage>Показания к применению Инфекционно-воспалительные заболевания (ОРВИ, грипп),
+                        сопровождающиеся повышенной температурой, ознобом, головной болью,
+                        болями в суставах и мышцах, заложенностью носа и болями в горле и пазухах носа.
+                    </dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m5" name="Морис" group="противоспалительное">
+        <versions>
+            <version type="капли">
+                <manufacture name="Каплиfarm">
+                    <certificate number="007" dateCreate="2024-02-03" dateExpiration="2026-02-03" registrationCompany="TFarm"/>
+                    <package type="флакон" weight="55" price="13.73" />
+                    <dosage>Капли в нос.Морис содержит бензалкония хлорид, который может вызывать раздражение полости носа</dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m6" name="Систейн" group="противоспалительное">
+        <versions>
+            <version type="капли">
+                <manufacture name="Каплиfarm">
+                    <certificate number="008" dateCreate="2024-02-03" dateExpiration="2026-02-03" registrationCompany="TFarm"/>
+                    <package type="флакон" weight="55" price="15.83" />
+                    <dosage>Капли для глаз.увлажняет поверхность глаза, восполняет и стабилизирует липидный слой слезной пленки и уменьшает чрезмерное испарение слезной жидкости.</dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m7" name="Отинум" group="противоспалительное">
+        <versions>
+            <version type="капли">
+                <manufacture name="Каплиfarm">
+                    <certificate number="009" dateCreate="2024-02-03" dateExpiration="2026-02-03" registrationCompany="TFarm"/>
+                    <package type="флакон" weight="10" price="10.63" />
+                    <dosage>Капли для ушей.Для размягчения отвердевшей ушной серы перед её удалением из уха:
+                        обычно 3-4 капли в наружный слуховой проход каждые 12 часов в течение 4 дней. </dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m8" name="Артелак" group="противоспалительное">
+        <versions>
+            <version type="капли">
+                <manufacture name="Каплиfarm">
+                    <certificate number="010" dateCreate="2024-02-03" dateExpiration="2026-02-03" registrationCompany="TFarm"/>
+                    <package type="флакон" weight="15" price="30" />
+                    <dosage>Капли для глаз.Средство рекомендовано при ношении линз, работе за компьютером, постоянном напряжении и утомляемости глаз.</dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m9" name="Амоксиклав" group="антибиотик">
+        <versions>
+            <version>
+                <manufacture name="Createfarm">
+                    <certificate number="011" dateCreate="2024-05-05" dateExpiration="2028-05-05" registrationCompany="TFarm"/>
+                    <package type="пластины" weight="25" price="10" />
+                    <dosage>Лекарство Амоксиклав — антибактериальное средство.
+                        Используется для терапии инфекций дыхательных путей, кожных покровов,
+                        мочевыводящих путей соединительных тканей и т. д
+                    </dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m10" name="Cумамед" group="антибиотик">
+        <analogs>
+            <analog name="Амоксиклав" />
+            <analog name="Сандоз" />
+        </analogs>
+        <versions>
+            <version>
+                <manufacture name="Createfarm">
+                    <certificate number="012" dateCreate="2024-05-05" dateExpiration="2028-05-05" registrationCompany="TFarm"/>
+                    <package type="пластины" weight="25" price="10" />
+                    <dosage>При инфекциях верхних и нижних отделов дыхательных путей, ЛОР-органов, кожи и мягких тканей препарат назначают
+                    </dosage>
+                </manufacture>
+            </version>
+            <version type="порошок">
+                <manufacture name="Createfarm">
+                    <certificate number="013" dateCreate="2024-05-05" dateExpiration="2028-05-05" registrationCompany="TFarm"/>
+                    <package type="пластины" weight="20" price="9.99" />
+                    <dosage>При инфекциях верхних и нижних отделов дыхательных путей, ЛОР-органов, кожи и мягких тканей препарат назначают
+                    </dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m11" name="Цинк пиколинат" group="микроэлемент">
+        <versions>
+            <version type="капсулы">
+                <manufacture name="farm">
+                    <certificate number="014" dateCreate="2024-02-03" dateExpiration="2026-02-03" registrationCompany="TFarm"/>
+                    <package type="банка" weight="60" price="54.7" />
+                    <dosage>Пиколинат цинка — это соединение, в котором Zinc связан с пиколиновой кислотой. </dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m12" name="нурофен" group="противоспалительное">
+        <versions>
+            <version>
+                <manufacture name="farm">
+                    <certificate number="015" dateCreate="2024-02-03" dateExpiration="2026-02-03" registrationCompany="TFarm"/>
+                    <package type="пластина" weight="60" price="54.7" />
+                    <dosage>Нурофен® применяют при головной боли, мигрени, зубной боли, невралгии, боли в спине, мышечной боли, ревматической боли </dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m13" name="Ибупрофен" group="противоспалительное">
+        <versions>
+            <version>
+                <manufacture name="farm">
+                    <certificate number="016" dateCreate="2024-02-03" dateExpiration="2026-02-03" registrationCompany="TFarm"/>
+                    <package type="пластина" weight="60" price="54.7" />
+                    <dosage>Ибупрофе́н — лекарственное средство, нестероидный противовоспалительный препарат из группы производных пропионовой кислоты, обладающий болеутоляющим и жаропонижающим действием. </dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m14" name="Супрастин" group="противоспалительное">
+        <versions>
+            <version>
+                <manufacture name="farm">
+                    <certificate number="017" dateCreate="2024-02-03" dateExpiration="2026-02-03" registrationCompany="TFarm"/>
+                    <package type="пластина" weight="40" price="50.7" />
+                    <dosage>Хлоропирамин — лекарственное средство, антигистаминный препарат, блокатор H1-гистаминовых рецепторов I-поколения</dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m15" name="Кларитин" group="противоспалительное">
+        <versions>
+            <version>
+                <manufacture name="farm">
+                    <certificate number="018" dateCreate="2024-02-03" dateExpiration="2026-02-03" registrationCompany="TFarm"/>
+                    <package type="пластина" weight="40" price="50.7" />
+                    <dosage>Взрослым, в том числе пожилым, и подросткам старше 12 лет рекомендуется прием лекарственного препарата Кларитин</dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m16" name="Аллергоферон" group="противоспалительное">
+        <versions>
+            <version type="капли">
+                <manufacture name="farm">
+                    <certificate number="019" dateCreate="2024-02-03" dateExpiration="2026-02-03" registrationCompany="TFarm"/>
+                    <package type="флакон" weight="40" price="50.7" />
+                    <dosage>капли от аллергии</dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+    <medicin id="m17" name="Визаллергол" group="противоспалительное">
+        <versions>
+            <version type="капли">
+                <manufacture name="farm">
+                    <certificate number="020" dateCreate="2024-02-03" dateExpiration="2026-02-03" registrationCompany="TFarm"/>
+                    <package type="флакон" weight="45" price="59.7" />
+                    <dosage>капли от аллергии</dosage>
+                </manufacture>
+            </version>
+        </versions>
+    </medicin>
+</medicins>

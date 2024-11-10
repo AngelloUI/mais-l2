@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <!-- Корневой элемент medicins -->
+    <xs:element name="medicins">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="medicin" type="medicinType" minOccurs="1" maxOccurs="20"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Описание medicin -->
+    <xs:complexType name="medicinType">
+        <xs:sequence>
+            <xs:element name="analogs" type="analogsType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="versions" type="versionsType" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/> <!-- Добавлено ID -->
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="group" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="антибиотик"/>
+                    <xs:enumeration value="болеутоляющие"/>
+                    <xs:enumeration value="витамины"/>
+                    <xs:enumeration value="микроэлемент"/>
+                    <xs:enumeration value="противоспалительное"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+    <!-- Описание analogs -->
+    <xs:complexType name="analogsType">
+        <xs:sequence>
+            <xs:element name="analog" type="analogType" minOccurs="0" maxOccurs="10"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Описание analog -->
+    <xs:complexType name="analogType">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Описание versions -->
+    <xs:complexType name="versionsType">
+        <xs:sequence>
+            <xs:element name="version" type="versionType" minOccurs="1" maxOccurs="10"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Описание version -->
+    <xs:complexType name="versionType">
+        <xs:sequence>
+            <xs:element name="manufacture" type="manufactureType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="type" use="optional" default="таблетки">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="таблетки"/>
+                    <xs:enumeration value="капли"/>
+                    <xs:enumeration value="капсулы"/>
+                    <xs:enumeration value="порошок"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+    <!-- Описание manufacture -->
+    <xs:complexType name="manufactureType">
+        <xs:sequence>
+            <xs:element name="certificate" type="certificateType" minOccurs="1"/>
+            <xs:element name="package" type="packageType" minOccurs="1"/>
+            <xs:element name="dosage" type="xs:string" minOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Описание certificate -->
+    <xs:complexType name="certificateType">
+        <xs:attribute name="number" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="\d{3}"/> <!-- Шаблон для номера сертификата: 3 цифры -->
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="dateCreate" type="xs:date" use="required"/>
+        <xs:attribute name="dateExpiration" type="xs:date" use="optional"/>
+        <xs:attribute name="registrationCompany" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Описание package -->
+    <xs:complexType name="packageType">
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="weight" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:positiveInteger">
+                    <xs:minInclusive value="10"/> <!-- Минимальный вес: 10 -->
+                    <xs:maxInclusive value="100"/> <!-- Максимальный вес: 100 -->
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="price" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:decimal">
+                    <xs:minInclusive value="1.00"/> <!-- Минимальная цена: 1.00 -->
+                    <xs:maxInclusive value="1000.00"/> <!-- Максимальная цена: 1000.00 -->
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+</xs:schema>
