@@ -29,7 +29,6 @@ public  class DomParse extends AbstractParseBuilder {
                 medicine.setName(medicinElement.getAttribute("name"));
                 medicine.setGroup(medicinElement.getAttribute("group"));
 
-                // Парсинг аналогов
                 NodeList analogList = medicinElement.getElementsByTagName("analog");
                 for (int j = 0; j < analogList.getLength(); j++) {
                     Element analogElement = (Element) analogList.item(j);
@@ -37,14 +36,12 @@ public  class DomParse extends AbstractParseBuilder {
                     medicine.addAnalog(new Analog(analogName));
                 }
 
-                // Парсинг версий
                 NodeList versionList = medicinElement.getElementsByTagName("version");
                 for (int j = 0; j < versionList.getLength(); j++) {
                     Element versionElement = (Element) versionList.item(j);
                     String versionType = versionElement.getAttribute("type");
                     Version version = new Version(versionType);
 
-                    // Парсинг производителей
                     NodeList manufactureList = versionElement.getElementsByTagName("manufacture");
                     for (int k = 0; k < manufactureList.getLength(); k++) {
                         Element manufactureElement = (Element) manufactureList.item(k);
@@ -58,26 +55,21 @@ public  class DomParse extends AbstractParseBuilder {
                         String registrationCompany = certificateElement.getAttribute("registrationCompany");
                         Certificate certificate = new Certificate(certificateNumber, dateCreate, dateExpiration, registrationCompany);
 
-                        // Парсинг упаковки
                         Element packageElement = (Element) manufactureElement.getElementsByTagName("package").item(0);
                         String packageType = packageElement.getAttribute("type");
                         int packageWeight = Integer.parseInt(packageElement.getAttribute("weight"));
                         double packagePrice = Double.parseDouble(packageElement.getAttribute("price"));
                         Package medicinPackage = new Package(packageType, packageWeight, packagePrice); // Изменено на MedicinePackage
 
-                        // Парсинг дозировки
                         String dosage = manufactureElement.getElementsByTagName("dosage").item(0).getTextContent();
 
-                        // Создание объекта Manufacture и добавление его в версию
                         Manufacture manufacture = new Manufacture(manufactureName, certificate, medicinPackage, dosage);
                         version.addManufacture(manufacture);
                     }
 
-                    // Добавляем версию к медикаменту
                     medicine.addVersion(version);
                 }
 
-                // Добавление медикамента в список
                 medicines.add(medicine);
             }
         } catch (Exception e) {

@@ -9,7 +9,6 @@ public class Factory {
     }
 
     public static AbstractParseBuilder createMedicineBuilder(String typeParser) {
-        // Валидация имени парсера
         TypeParser type = TypeParser.valueOf(typeParser.toUpperCase());
         switch (type) {
             case DOM -> {

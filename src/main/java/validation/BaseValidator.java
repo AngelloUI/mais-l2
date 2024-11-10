@@ -23,15 +23,11 @@ public class BaseValidator {
         File schemaLocation = new File(schemaName);
 
         try {
-            // schema creation
             Schema schema = factory.newSchema(schemaLocation);
-            // creating a schema-based validator
             Validator validator = schema.newValidator();
-            // Use File object to create Source
             File xmlFile = new File(fileName);
             Source source = new StreamSource(xmlFile);
 
-            // document check
             validator.setErrorHandler(new ErrorHandler() {
                 @Override
                 public void warning(SAXParseException e) {

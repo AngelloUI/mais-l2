@@ -103,7 +103,6 @@ public class SaxParse extends AbstractParseBuilder {
 
                 case "manufacture":
                     if (currentVersion != null && currentManufacture != null) {
-                        // Устанавливаем сертификат и упаковку в manufacture до завершения элемента
                         if (currentCertificate != null) {
                             currentManufacture.setCertificate(currentCertificate);
                         }
@@ -111,7 +110,6 @@ public class SaxParse extends AbstractParseBuilder {
                             currentManufacture.setMedicinPackage(currentPackage);
                         }
 
-                        // Отладка для проверки, что certificate и package установлены
                         System.out.println("Добавлен Manufacture: " + currentManufacture);
 
                         currentVersion.addManufacture(currentManufacture);  // Добавляем в версию
@@ -123,11 +121,9 @@ public class SaxParse extends AbstractParseBuilder {
                     break;
 
                 case "certificate":
-                    // Здесь ничего не делаем, так как certificate уже добавлен в manufacture
                     break;
 
                 case "package":
-                    // Здесь ничего не делаем, так как package уже добавлен в manufacture
                     break;
             }
             currentElement = null;

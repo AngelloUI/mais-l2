@@ -18,11 +18,10 @@ public class Medicin {
         this.versions = new ArrayList<>();
     }
     public Medicin() {
-        this.analogs = new ArrayList<>();  // Инициализация списка аналогов
-        this.versions = new ArrayList<>();  // Инициализация списка версий
+        this.analogs = new ArrayList<>();
+        this.versions = new ArrayList<>();
     }
 
-    // Геттеры и сеттеры
     public String getId() {
         return id;
     }
@@ -64,19 +63,19 @@ public class Medicin {
     public String toString() {
         String analogsString = "";
         for (Analog analog : analogs) {
-            analogsString += analog.getName() + " "; // Добавление имени аналога с пробелом
+            analogsString += analog.getName() + " ";
         }
 
         String versionsString = "";
         for (Version version : versions) {
-            versionsString += version.toString() + " "; // Использование toString() из класса Version с пробелом
+            versionsString += version.toString() + " ";
         }
 
         return "Medicin{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", group='" + group + '\'' +
-                ", analogs=[" + analogsString.trim() + "]" + // Удаление лишнего пробела в конце
+                ", analogs=[" + analogsString.trim() + "]" +
                 ", versions=[" + versionsString.trim() + "]" +
                 "}";
     }

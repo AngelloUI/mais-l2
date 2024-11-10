@@ -14,7 +14,6 @@ public class Version {
         this("таблетки");
     }
 
-    // Геттеры и сеттеры
     public String getType() {
         return type;
     }

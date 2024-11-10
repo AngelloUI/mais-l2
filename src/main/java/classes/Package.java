@@ -11,7 +11,6 @@ public class Package {
         this.price = price;
     }
 
-    // Геттеры
     public String getType() {
         return type;
     }
